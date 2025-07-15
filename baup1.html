@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>اللغة العربية لأغراض السياحة - الأسبوع الأول</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      direction: rtl;
+    }
+
+    header {
+      background-color: #005a87;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    h1, h2 {
+      color: #00334e;
+    }
+
+    section {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .quiz-question {
+      margin-top: 15px;
+    }
+
+    button {
+      background-color: #005a87;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .feedback {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>اللغة العربية لأغراض السياحة</h1>
+    <h2>المادة: الأسبوع الأول - التحية والمفردات الأساسية</h2>
+  </header>
+
+  <section>
+    <h2>🎯 أهداف التعلم</h2>
+    <ul>
+      <li>التعرف على التحيات والمفردات الأساسية المستخدمة في السياحة.</li>
+      <li>استخدام العبارات المناسبة عند استقبال السائح.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📘 المفردات الأساسية</h2>
+    <ul>
+      <li>مرحبًا = Hello</li>
+      <li>كيف حالك؟ = How are you?</li>
+      <li>أنا مرشد سياحي = I am a tour guide</li>
+      <li>من أين أنت؟ = Where are you from?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🗣️ حوار تفاعلي</h2>
+    <p><strong>المرشد:</strong> مرحبًا! كيف حالك؟</p>
+    <p><strong>السائح:</strong> أنا بخير، شكرًا. من فضلك، أين الفندق؟</p>
+    <p><strong>المرشد:</strong> الفندق هناك، بجانب البنك.</p>
+  </section>
+
+  <section>
+    <h2>🧠 اختبار قصير</h2>
+    <div class="quiz-question">
+      <p>ما معنى "من أين أنت؟"</p>
+      <button onclick="showFeedback(this, true)">من أي بلد أنت؟</button>
+      <button onclick="showFeedback(this, false)">كيف حالك؟</button>
+      <div class="feedback"></div>
+    </div>
+  </section>
+
+  <script>
+    function showFeedback(btn, isCorrect) {
+      const feedback = btn.nextElementSibling;
+      if (isCorrect) {
+        feedback.textContent = "✔️ إجابة صحيحة!";
+        feedback.style.color = "green";
+      } else {
+        feedback.textContent = "❌ إجابة غير صحيحة. حاول مرة أخرى.";
+        feedback.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>
